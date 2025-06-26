@@ -1,0 +1,15 @@
+{
+  "package-id" : "ca.ontariohealth.questionnaire.draft",
+  "version" : "1.0.0-draft",
+  "milestone" : false,
+	"path": "http://ontariohealth.ca/fhir/questionnaire/draft",
+  "status" : "draft",
+  "mode" : "working",
+  "first" : true,
+  "sequence" : "STU 1",
+  "desc" : "Initial draft",
+  "descmd" : "Initial draft",
+  "title" : "Ontario Health Referral Questionnaires",
+  "category" : "Forms Management",
+  "introduction" : "Proof-of-concept IG for Ontario e-referral forms"
+}

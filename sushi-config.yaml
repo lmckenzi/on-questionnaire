@@ -1,0 +1,53 @@
+id: ca.ontariohealth.questionnaire.draft
+canonical: http://ontariohealth.ca/fhir/questionnaire
+version: 1.0.0-draft
+name: OntarioQuestionnaire
+title: Ontario Questionnaire Requirements
+status: draft
+publisher:
+  name: Ontario Health
+  url: http://www.ontariohealth.ca
+contact:
+    telecom:
+      - system: url
+        value: http://www.ontariohealth.ca
+description: A proof-of-concept IG defining expectations for FHIR-based Questionnaires that meet the legacy capabilities of the Ontario-created legacy Ocean forms
+license: CC0-1.0
+fhirVersion: 4.0.1
+instanceOptions:
+  manualSliceOrdering: true
+parameters:
+  apply-publisher: true
+  apply-contact: true
+  globals-in-artifacts: true
+  pin-canonicals: pin-multiples
+  show-inherited-invariants: false
+  shownav: true
+copyrightYear: 2025+
+releaseLabel: Draft
+jurisdiction: urn:iso:std:iso:3166#CA "Canada"
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: "informative"
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: "1"
+dependencies:
+  hl7.fhir.uv.extensions.r4:
+    id: ext
+    version: 5.2.0
+  hl7.fhir.extensions.r5:
+    id: r5ext
+    version: 4.0.1
+    reason: |
+      Makes available certain R5 elements for use as part of this R4 IG
+  hl7.fhir.uv.sdc:
+    id: sdc
+    version: current
+pages:
+  index.md:
+    title: Home Page
+resources:
+  Questionnaire/20250321Hematology:
+    name: Example Standard Questionnaire
+    description: A sample questionnaire that attempts to expose the range of functionality supported in the Ontario Questionnaire profile
+    exampleCanonical: http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire

@@ -1,0 +1,13 @@
+== Suppressed Messages ==
+# 5.2.0 of extensions is indeed what's wanted
+%5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+
+# This HTML content is not a risk if rendered.  It contains no links or executable code
+INFORMATION: StructureDefinition/sdc-questionnaire-ontario: StructureDefinition.snapshot.element[374].mapping[0].comment: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/sdc-questionnaire-ontario: StructureDefinition.differential.element[102].mapping[0].comment: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+# This extension is specifically intended to contain HTML
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+# There's zero use for an OID in this context
+The resource Questionnaire/20250321Hematology could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)

@@ -1,0 +1,388 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/StructureDefinition/mimeType",
+      "concept" : [{
+        "code" : "application/pdf"
+      },
+      {
+        "code" : "image/gif"
+      },
+      {
+        "code" : "image/bmp"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      },
+      {
+        "code" : "application/vnd.ms-xpsdocument"
+      },
+      {
+        "code" : "audio/wav"
+      },
+      {
+        "code" : "video/3gpp2"
+      },
+      {
+        "code" : "video/mp4"
+      },
+      {
+        "code" : "video/mpeg"
+      },
+      {
+        "code" : "application/octet-stream"
+      },
+      {
+        "code" : "audio/x-ms-wma"
+      },
+      {
+        "code" : "video/x-flv"
+      },
+      {
+        "code" : "application/vnd.ms-works"
+      },
+      {
+        "code" : "text/csv"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.presentationml.slideshow"
+      },
+      {
+        "code" : "application/dicom"
+      },
+      {
+        "code" : "image/x-adobe-dng"
+      },
+      {
+        "code" : "image/jpeg"
+      },
+      {
+        "code" : "application/msword"
+      },
+      {
+        "code" : "image/png"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "code" : "application/vnd.ms-excel"
+      },
+      {
+        "code" : "text/plain"
+      },
+      {
+        "code" : "application/rtf"
+      },
+      {
+        "code" : "video/3gpp"
+      },
+      {
+        "code" : "video/x-msvideo"
+      },
+      {
+        "code" : "video/x-ms-wmv"
+      },
+      {
+        "code" : "video/quicktime"
+      },
+      {
+        "code" : "video/ogg"
+      },
+      {
+        "code" : "audio/ogg"
+      },
+      {
+        "code" : "audio/mp4"
+      },
+      {
+        "code" : "audio/mpeg"
+      },
+      {
+        "code" : "application/vnd.lotus-1-2-3"
+      },
+      {
+        "code" : "application/vnd.ms-powerpoint"
+      },
+      {
+        "code" : "application/vnd.wordperfect"
+      },
+      {
+        "code" : "image/tiff"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/StructureDefinition/mimeType"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://ontariohealth.ca/fhir/questionnaire/ValueSet/mime-types", "version": "1.0.0-draft"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/StructureDefinition/mimeType"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/StructureDefinition/mimeType",
+      "concept" : [{
+        "code" : "application/pdf"
+      },
+      {
+        "code" : "image/gif"
+      },
+      {
+        "code" : "image/bmp"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      },
+      {
+        "code" : "application/vnd.ms-xpsdocument"
+      },
+      {
+        "code" : "audio/wav"
+      },
+      {
+        "code" : "video/3gpp2"
+      },
+      {
+        "code" : "video/mp4"
+      },
+      {
+        "code" : "video/mpeg"
+      },
+      {
+        "code" : "application/octet-stream"
+      },
+      {
+        "code" : "audio/x-ms-wma"
+      },
+      {
+        "code" : "video/x-flv"
+      },
+      {
+        "code" : "application/vnd.ms-works"
+      },
+      {
+        "code" : "text/csv"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.presentationml.slideshow"
+      },
+      {
+        "code" : "application/dicom"
+      },
+      {
+        "code" : "image/x-adobe-dng"
+      },
+      {
+        "code" : "image/jpeg"
+      },
+      {
+        "code" : "application/msword"
+      },
+      {
+        "code" : "image/png"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "code" : "application/vnd.ms-excel"
+      },
+      {
+        "code" : "text/plain"
+      },
+      {
+        "code" : "application/rtf"
+      },
+      {
+        "code" : "video/3gpp"
+      },
+      {
+        "code" : "video/x-msvideo"
+      },
+      {
+        "code" : "video/x-ms-wmv"
+      },
+      {
+        "code" : "video/quicktime"
+      },
+      {
+        "code" : "video/ogg"
+      },
+      {
+        "code" : "audio/ogg"
+      },
+      {
+        "code" : "audio/mp4"
+      },
+      {
+        "code" : "audio/mpeg"
+      },
+      {
+        "code" : "application/vnd.lotus-1-2-3"
+      },
+      {
+        "code" : "application/vnd.ms-powerpoint"
+      },
+      {
+        "code" : "application/vnd.wordperfect"
+      },
+      {
+        "code" : "image/tiff"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/StructureDefinition/mimeType"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/StructureDefinition/mimeType",
+      "concept" : [{
+        "code" : "application/pdf"
+      },
+      {
+        "code" : "image/gif"
+      },
+      {
+        "code" : "image/bmp"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      },
+      {
+        "code" : "application/vnd.ms-xpsdocument"
+      },
+      {
+        "code" : "audio/wav"
+      },
+      {
+        "code" : "video/3gpp2"
+      },
+      {
+        "code" : "video/mp4"
+      },
+      {
+        "code" : "video/mpeg"
+      },
+      {
+        "code" : "application/octet-stream"
+      },
+      {
+        "code" : "audio/x-ms-wma"
+      },
+      {
+        "code" : "video/x-flv"
+      },
+      {
+        "code" : "application/vnd.ms-works"
+      },
+      {
+        "code" : "text/csv"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.presentationml.slideshow"
+      },
+      {
+        "code" : "application/dicom"
+      },
+      {
+        "code" : "image/x-adobe-dng"
+      },
+      {
+        "code" : "image/jpeg"
+      },
+      {
+        "code" : "application/msword"
+      },
+      {
+        "code" : "image/png"
+      },
+      {
+        "code" : "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "code" : "application/vnd.ms-excel"
+      },
+      {
+        "code" : "text/plain"
+      },
+      {
+        "code" : "application/rtf"
+      },
+      {
+        "code" : "video/3gpp"
+      },
+      {
+        "code" : "video/x-msvideo"
+      },
+      {
+        "code" : "video/x-ms-wmv"
+      },
+      {
+        "code" : "video/quicktime"
+      },
+      {
+        "code" : "video/ogg"
+      },
+      {
+        "code" : "audio/ogg"
+      },
+      {
+        "code" : "audio/mp4"
+      },
+      {
+        "code" : "audio/mpeg"
+      },
+      {
+        "code" : "application/vnd.lotus-1-2-3"
+      },
+      {
+        "code" : "application/vnd.ms-powerpoint"
+      },
+      {
+        "code" : "application/vnd.wordperfect"
+      },
+      {
+        "code" : "image/tiff"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/StructureDefinition/mimeType"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://ontariohealth.ca/fhir/questionnaire/ValueSet/mime-types", "version": "1.0.0-draft"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/StructureDefinition/mimeType"
+}
+-------------------------------------------------------------------------------------
