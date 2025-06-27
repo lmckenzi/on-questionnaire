@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <id value="note-tester-response"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <span>Best Method of Contact: Business #</span><br/>
+      <span>Voicemails generally acceptable: No</span><br/>
+    </div>
+  </text>
+  <questionnaire value="http://ontariohealth.ca/fhir/questionnaire/Questionnaire/note-tester"/>
+  <status value="completed"/>
+  <subject>
+    <reference value="http://example.org/Patient/123"/>
+  </subject>
+  <authored value="2025-06-26"/>
+  <item>
+    <linkId value="BestContactMethod"/>
+    <text value="Best method of contact"/>
+    <answer>
+      <valueCoding>
+        <code value="BUSINESS"/>
+        <display value="Business #"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="item73068595"/>
+    <text value="Voicemails acceptable"/>
+    <answer>
+      <valueBoolean value="false"/>
+    </answer>
+  </item>
+</QuestionnaireResponse>

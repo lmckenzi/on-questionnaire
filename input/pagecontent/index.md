@@ -25,6 +25,10 @@ calculations or logic as defined by the definition of that element.  Ignoring or
 The [Questionnaire profile](StructureDefinition-sdc-questionnaire.html) profile includes several mustSupport extensions with a data type of `Expression`.
 For the purposes of this guide, expressions **SHALL* be expressed in FHIRPath.  Form fillers **SHALL** support any valid FHIRPath 2.0.0 expression.
 
+### Population and Extraction
+(TODO: Timeframe for this?) Form Fillers **SHALL** support [Expression-based population]({{site.data.fhir.ver.sdc}}/populate.html#exp-pop) and 
+[Definition-based extraction]({{site.data.fhir.ver.sdc}}/extraction.html#definition-extract) 
+
 ### QuestionnaireResponse narrative
 When a QuestionnaireResponse is completed, form fillers **SHALL** generate the narrative using any provided FHIR Liquid template pointed to by the []()
 

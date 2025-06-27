@@ -1,0 +1,17 @@
+<!-- Liquid template version: 0.4.6 -->
+<div>
+  {% if %resource.item.where(linkId='BestContactMethod').answer.valueCoding.code == 'OTHER' %}
+    <span>Best Method of Contact: Mobile #</span><br/>
+  {% elsif %resource.item.where(linkId='BestContactMethod').answer.valueCoding.code == 'HOME' %}
+    <span>Best Method of Contact: Home #</span><br/>
+  {% elsif %resource.item.where(linkId='BestContactMethod').answer.valueCoding.code == 'HOME' %}
+    <span>Best Method of Contact: Business #</span><br/>
+  {% endif %}
+  {% if %resource.item.where(linkId='BestContactMethod').answer.exists() %}
+    {% if %resource.item.where(linkId='BestContactMethod').answer.valueBoolean == false %}
+      <span>Voicemails generally acceptable: No</span><br/>
+    {% elsif %resource.item.where(linkId='BestContactMethod').answer.valueBoolean == true %}
+      <span>Voicemails generally acceptable: Yes</span><br/>
+    {% endif %}
+  {% endif %}
+</div>

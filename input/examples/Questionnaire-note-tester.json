@@ -1,0 +1,119 @@
+{
+  "id": "note-tester",
+  "resourceType": "Questionnaire",
+  "contained": [{
+    "resourceType": "Library",
+    "id": "liquid",
+    "status": "active",
+    "type": {
+      "text": "Liquid template"
+    },
+    "content": [{
+      "contentType": "text/xml",
+      "data": "PCEtLSBMaXF1aWQgdGVtcGxhdGUgdmVyc2lvbjogMC40LjYgLS0+CjxkaXY+CiAgeyUgaWYgJXJlc291cmNlLml0ZW0ud2hlcmUobGlua0lkPSdCZXN0Q29udGFjdE1ldGhvZCcpLmFuc3dlci52YWx1ZUNvZGluZy5jb2RlID09ICdPVEhFUicgJX0KICAgIDxzcGFuPkJlc3QgTWV0aG9kIG9mIENvbnRhY3Q6IE1vYmlsZSAjPC9zcGFuPjxici8+CiAgeyUgZWxzaWYgJXJlc291cmNlLml0ZW0ud2hlcmUobGlua0lkPSdCZXN0Q29udGFjdE1ldGhvZCcpLmFuc3dlci52YWx1ZUNvZGluZy5jb2RlID09ICdIT01FJyAlfQogICAgPHNwYW4+QmVzdCBNZXRob2Qgb2YgQ29udGFjdDogSG9tZSAjPC9zcGFuPjxici8+CiAgeyUgZWxzaWYgJXJlc291cmNlLml0ZW0ud2hlcmUobGlua0lkPSdCZXN0Q29udGFjdE1ldGhvZCcpLmFuc3dlci52YWx1ZUNvZGluZy5jb2RlID09ICdIT01FJyAlfQogICAgPHNwYW4+QmVzdCBNZXRob2Qgb2YgQ29udGFjdDogQnVzaW5lc3MgIzwvc3Bhbj48YnIvPgogIHslIGVuZGlmICV9CiAgeyUgaWYgJXJlc291cmNlLml0ZW0ud2hlcmUobGlua0lkPSdCZXN0Q29udGFjdE1ldGhvZCcpLmFuc3dlci5leGlzdHMoKSAlfQogICAgeyUgaWYgJXJlc291cmNlLml0ZW0ud2hlcmUobGlua0lkPSdCZXN0Q29udGFjdE1ldGhvZCcpLmFuc3dlci52YWx1ZUJvb2xlYW4gPT0gZmFsc2UgJX0KICAgICAgPHNwYW4+Vm9pY2VtYWlscyBnZW5lcmFsbHkgYWNjZXB0YWJsZTogTm88L3NwYW4+PGJyLz4KICAgIHslIGVsc2lmICVyZXNvdXJjZS5pdGVtLndoZXJlKGxpbmtJZD0nQmVzdENvbnRhY3RNZXRob2QnKS5hbnN3ZXIudmFsdWVCb29sZWFuID09IHRydWUgJX0KICAgICAgPHNwYW4+Vm9pY2VtYWlscyBnZW5lcmFsbHkgYWNjZXB0YWJsZTogWWVzPC9zcGFuPjxici8+CiAgICB7JSBlbmRpZiAlfQogIHslIGVuZGlmICV9CjwvZGl2Pgo="
+    }]
+  }],
+  "extension": [{
+    "url": "http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-responseRenderingLiquid",
+    "valueReference": {
+      "reference": "#liquid"
+    }
+  }],
+  "title": "Note Tester",
+  "status": "draft",
+  "description": "Proof-of-concept showing how notes and Liquid would work",
+  "item": [
+    {
+      "type": "choice",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "radio-button",
+                "display": "Radio Button"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "BestContactMethod",
+      "text": "Best method of contact",
+      "required": false,
+      "repeats": false,
+      "answerOption": [
+        {
+          "extension": [{
+            "url": "http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/option-note-info",
+            "extension": [{
+              "url": "text",
+              "valueString": "Best Method of Contact: Mobile #"
+            }]
+          }],
+          "valueCoding": {
+            "code": "OTHER",
+            "display": "Mobile #"
+          }
+        },
+        {
+          "extension": [{
+            "url": "http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/option-note-info",
+            "extension": [{
+              "url": "text",
+              "valueString": "Best Method of Contact: Home #"
+            }]
+          }],
+          "valueCoding": {
+            "code": "HOME",
+            "display": "Home #"
+          }
+        },
+        {
+          "extension": [{
+            "url": "http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/option-note-info",
+            "extension": [{
+              "url": "text",
+              "valueString": "Best Method of Contact: Business #"
+            }]
+          }],
+          "valueCoding": {
+            "code": "BUSINESS",
+            "display": "Business #"
+          }
+        }
+      ]
+    },
+    {
+      "extension": [{
+        "url": "http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/question-note-info",
+        "extension": [{
+          "url": "enableWhenExpression",
+          "valueExpression": {
+            "language": "text/fhirpath",
+            "expression": "%resource.item.where(linkId='BestContactMethod').answer.exists()" 
+          }
+        },{
+          "url": "negativeText",
+          "valueString": "Voicemails generally acceptable: No"
+        },{
+          "url": "positiveText",
+          "valueString": "Voicemails generally acceptable: Yes"
+        }]
+      }],
+      "type": "boolean",
+      "linkId": "item73068595",
+      "text": "Voicemails acceptable",
+      "enableWhen": [
+        {
+          "question": "BestContactMethod",
+          "operator": "exists",
+          "answerBoolean": true
+        }
+      ],
+      "required": false,
+      "repeats": false
+    }
+  ]
+}
