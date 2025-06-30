@@ -57,6 +57,8 @@ Description: "Defines additional the Questionnaire requirements to align with us
   * ^comment = "This may refer to a contained Library or a Library available from a FHIR server"
   * valueReference 1..1 MS
     * reference 1..1 MS
+* contained 0..* MS
+  * ^requirements = "Used for contained Binary instances for images and Library instances for Liquid rendering templates"
 * url 1..1 MS
 * version 1..1 MS
 * title MS
@@ -186,7 +188,9 @@ Description: "Defines additional the Questionnaire requirements to align with us
     * question MS
     * operator MS
     * answer[x] MS
-    * answer[x] only decimal or integer or date or dateTime or time or string or Coding
+    * answer[x] only boolean or decimal or integer or date or dateTime or time or string or Coding
+* item[display]
+  * type = #display
 * item[group]
   * extension contains
       $collapsible named collapsible 0..1 MS and
@@ -206,10 +210,6 @@ Description: "Defines additional the Questionnaire requirements to align with us
     * insert CommonNoteDeclaration
     * extension[groupItems] MS
       * valueBoolean MS
-    * extension[listSeparator] MS
-      * valueString MS
-    * extension[lastSeparator] MS
-      * valueString MS
   * type = #group
   * required MS
   * repeats MS
@@ -226,7 +226,7 @@ Description: "Defines additional the Questionnaire requirements to align with us
       $initialExpression named initialExpression 0..1 MS and
       $minLength named minLength 0..1 MS and
       $maxSize named maxSize 0..1 MS and
-      $mimeType named mimeType 0..1 MS and
+      $mimeType named mimeType 0..* MS and
       $minValue named minValue 0..1 MS and
       $maxValue named maxValue 0..1 MS and
       $questionnaire-choiceOrientation named choiceOrientation 0..1 MS and
@@ -236,7 +236,8 @@ Description: "Defines additional the Questionnaire requirements to align with us
       $questionnaire-supportLink named supportLink 0..1 MS and
       $targetConstraint named targetConstraint 0..* MS and
       SameLine named sameLine 0..1 MS and
-      QuestionNoteInfo named noteInfo 0..1
+      QuestionNoteInfo named noteInfo 0..1 and
+      ChoiceDiagram named choiceDiagram 0..1
   * extension[calculatedExpression].valueExpression MS
     * language = #text/fhirpath
     * expression 1..1 MS
@@ -283,14 +284,19 @@ Description: "Defines additional the Questionnaire requirements to align with us
   * extension[sameLine].valueBoolean MS
   * extension[noteInfo]
     * insert CommonNoteDeclaration
+    * extension[ownLine] MS
+      * valueBoolean MS
+    * extension[quoteAnswer] MS
+      * valueBoolean MS
     * extension[negativeText] MS
       * valueString MS
     * extension[positiveText] MS
       * valueString MS
     * extension[negativeStyle] MS
       * valueString MS
-    * extension[studyColumnHeader] MS
-      * valueString MS
+//    * extension[studyColumnHeader] MS
+//      * valueString MS
+  * extension[choiceDiagram].valueUrl MS
   * type MS
   * type from ONGroupQuestionType (required)
     * insert minimum(ONGroupQuestionType)
@@ -356,19 +362,19 @@ Expression: "type='date' or type='dateTime' or type='decimal' or type='integer' 
 Invariant: onq-6
 Description: "choice orientation and item control are only permitted when there are options or a value set"
 Severity: #error
-Expression: "extension('http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation').exists() or extension('http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl').exists() implies answerOption.exists()"
+Expression: "(extension('http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation').exists() or extension('http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl').exists()) implies (answerOption.exists() or answerValueSet.exists())"
 
 Invariant: onq-7
 Description: "minOccurs and maxOccurs are only permitted when repeats=true"
 Severity: #error
-Expression: "extension('http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs').exists() or extension('http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs').exists() implies repeats"
+Expression: "(extension('http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs').exists() or extension('http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs').exists()) implies repeats"
 
 
 Extension: ShortString
 Id: core-short-string
 Title: "Short Form String"
 Description: "A shorter version of a string, typically intended for use on mobile displays."
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "string"
 * . 0..1
@@ -381,7 +387,7 @@ Extension: UriLabel
 Id: core-uri-label
 Title: "URI Label"
 Description: "A human-readable label for a URI."
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "uri"
 * . 0..1
@@ -394,7 +400,7 @@ Extension: SameLine
 Id: sdc-same-line
 Title: "Answer on Same Line"
 Description: "If true, requires that the answer be on the same line as the question."
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "Questionnaire.item"
 * . 0..1
@@ -403,11 +409,25 @@ Description: "If true, requires that the answer be on the same line as the quest
 * url only uri
 * value[x] only boolean
 
+Extension: ChoiceDiagram
+Id: sdc-choice-diagram
+Title: "Image for Choice Diagram"
+Description: "A link to the SVG diagram that is used to render the choice options."
+* ^status = #active
+* ^context.type = #element
+* ^context.expression = "Questionnaire.item"
+* ^contextInvariant[+] = "extension('http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl').value.coding.exists(code='graphic-choice')"
+* . 0..1
+* . ^short = "Image for Choice Diagram?"
+* . ^definition = "A link to the SVG diagram that is used to render the choice options."
+* url only uri
+* value[x] only url
+
 Extension: ResponseRenderingLiquid
 Id: sdc-responseRenderingLiquid
 Title: "Response Rendering Liquid Template"
 Description: "Points to a Library containing [FHIR Liquid](https://confluence.hl7.org/spaces/FHIR/pages/66938964/FHIR+Liquid+Profile) template that defines how the narrative for QuestionnaireResponses created for this Questionnaire should be generated. "
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "Questionnaire"
 * . 0..1
@@ -420,7 +440,7 @@ Extension: OptionNoteInfo
 Id: option-note-info
 Title: "Option Note Info"
 Description: "Parameters that will determine how notes generated from this QuestionnaireResponse will be generated"
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "Questionnaire.item.answerOption"
 * value[x] 0..0
@@ -442,45 +462,52 @@ Extension: GroupNoteInfo
 Id: group-note-info
 Title: "Group Note Info"
 Description: "Parameters that will determine how notes generated from this QuestionnaireResponse will be generated"
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "Questionnaire.item"
 * value[x] 0..0
 * insert CommonNoteInfo
 * extension contains
-  groupItems 0..1 and
-  listSeparator 0..1 and
-  lastSeparator 0..1
+  groupItems 0..1
 * extension[groupItems]
   * ^short = "Group questions by answer"
   * ^definition = "Indicates that when rendering a group of questions with answers in the 'note' produced from the completed QuestionnaireResponse, all of the 'yes' answers will be listed before all of the 'no' answers"
   * value[x] 1..1
   * value[x] only boolean
-* extension[listSeparator]
-  * ^short = "Separator between answers"
-  * ^definition = "Indicates the text to place between answers if there are more than one (e.g. '; ', ', ' etc.) in the 'note' produced from the completed QuestionnaireResponse"
-  * value[x] 1..1
-  * value[x] only string
-* extension[lastSeparator]
-  * ^short = "Separator before final answer"
-  * ^definition = "Indicates the text to place before the final answer in a list of answers if there is more than one (e.g. '; or ',  ', and ' etc.) in the 'note' produced from the completed QuestionnaireResponse"
-  * value[x] 1..1
-  * value[x] only string
 
 Extension: QuestionNoteInfo
 Id: question-note-info
 Title: "Question Note Info"
 Description: "Parameters that will determine how notes produced from this group in the QuestionnaireResponse will be generated"
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "Questionnaire.item"
 * value[x] 0..0
 * insert CommonNoteInfo
 * extension contains
+  flagStyle 0..1 MS and
+  ownLine 0..1 MS and
+  quoteAnswer 0..1 MS and
   negativeText 0..1 and
   positiveText 0..1 and
-  negativeStyle 0..1 and
-  studyColumnHeader 0..1
+  negativeStyle 0..1
+//  studyColumnHeader 0..1 and
+* extension[flagStyle]
+  * ^short = "Flagged note item style/color"
+  * ^definition = "Style (color) for this item when evaluated as 'flagged' and rendered in the 'note' produced from the completed QuestionnaireResponse"
+  * value[x] 1..1
+  * value[x] only string
+  * value[x] from ONNoteFlagStyles
+* extension[ownLine]
+  * ^short = "Heading and response on same line?"
+  * ^definition = "When rendering this item, if 'true', indicates that the answer(s) should appear on the same line as the heading/question, otherwise they'll appear on the following line"
+  * value[x] 1..1
+  * value[x] only boolean
+* extension[quoteAnswer]
+  * ^short = "Put quotes around answers?"
+  * ^definition = "If true, will surround the answer(s) for the item when rendering them in the 'note' produced from the completed QuestionnaireResponse"
+  * value[x] 1..1
+  * value[x] only boolean
 * extension[negativeText]
   * ^short = "Text for negative points"
   * ^definition = "When rendering the question in the 'note' produced from the completed QuestionnaireResponse, indicates the text to display for 'false', negative-point, or omitted answers"
@@ -496,11 +523,11 @@ Description: "Parameters that will determine how notes produced from this group 
   * ^definition = "When rendering the question in the 'note' produced from the completed QuestionnaireResponse, indicates the text to display for 'false', negative-point, or omitted answers"
   * value[x] 1..1
   * value[x] only string
-* extension[studyColumnHeader]
-  * ^short = "???"
-  * ^definition = "TODO: What is this for??"
-  * value[x] 1..1
-  * value[x] only string
+//* extension[studyColumnHeader]
+//  * ^short = "???"
+//  * ^definition = "TODO: What is this for??"
+//  * value[x] 1..1
+//  * value[x] only string
 
 RuleSet: minimum(valueset) 
 * ^binding.extension.url = $additional-binding
@@ -523,10 +550,6 @@ RuleSet: CommonNoteDeclaration
   * valuePositiveInt MS
 * extension[text] MS
   * valueString MS
-* extension[ownLine] MS
-  * valueBoolean MS
-* extension[quoteAnswer] MS
-  * valueBoolean MS
 * extension[style] MS
   * valueString MS
 
@@ -535,10 +558,9 @@ RuleSet: CommonNoteInfo
   enableWhenExpression 0..1 MS and
   sortIndex 0..1 and
   text 0..1 MS and
-  style 0..1 MS and
-  flagStyle 0..1 MS and
-  ownLine 0..1 MS and
-  quoteAnswer 0..1 MS
+  listSeparator 0..1 and
+  lastSeparator 0..1 and
+  style 0..1 MS
 * extension[enableWhenExpression]
   * ^short = "Conditions for displaying in note"
   * ^definition = "Script content that controls whether this item should appear in the 'note' produced from the completed QuestionnaireResponse"
@@ -555,34 +577,28 @@ RuleSet: CommonNoteInfo
   * ^comment = "The text MAY have a $$ present in it.  If so, the answer is substituted for the $$.  Otherwise, the answer will appear following the specified text."
   * value[x] 1..1
   * value[x] only string
+* extension[listSeparator]
+  * ^short = "Separator between answers"
+  * ^definition = "Indicates the text to place between answers if there are more than one (e.g. '; ', ', ' etc.) in the 'note' produced from the completed QuestionnaireResponse"
+  * value[x] 1..1
+  * value[x] only string
+* extension[lastSeparator]
+  * ^short = "Separator before final answer"
+  * ^definition = "Indicates the text to place before the final answer in a list of answers if there is more than one (e.g. '; or ',  ', and ' etc.) in the 'note' produced from the completed QuestionnaireResponse"
+  * value[x] 1..1
+  * value[x] only string
 * extension[style]
   * ^short = "Note item style"
   * ^definition = "Style for this item when rendered in the 'note' produced from the completed QuestionnaireResponse"
   * value[x] 1..1
   * value[x] only string
   * value[x] from ONNoteStyles
-* extension[flagStyle]
-  * ^short = "Flagged note item style/color"
-  * ^definition = "Style (color) for this item when evaluated as 'flagged' and rendered in the 'note' produced from the completed QuestionnaireResponse"
-  * value[x] 1..1
-  * value[x] only string
-  * value[x] from ONNoteFlagStyles
-* extension[ownLine]
-  * ^short = "Heading and response on same line?"
-  * ^definition = "When rendering this item, if 'true', indicates that the answer(s) should appear on the same line as the heading/question, otherwise they'll appear on the following line"
-  * value[x] 1..1
-  * value[x] only boolean
-* extension[quoteAnswer]
-  * ^short = "Put quotes around answers?"
-  * ^definition = "If true, will surround the answer(s) for the item when rendering them in the 'note' produced from the completed QuestionnaireResponse"
-  * value[x] 1..1
-  * value[x] only boolean
 
 ValueSet: ONLaunchContexts
 Id: launch-contexts
 Title: "Launch Contexts for Ontario Questionnaires"
 Description: "Launch context codes allowed for use in Ontario e-referral and other Questionnaires"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 * $launchContextCodes#patient
@@ -592,7 +608,7 @@ ValueSet: ONLaunchContextResources
 Id: launch-context-resources
 Title: "Launch Context Resources for Ontario Questionnaires"
 Description: "Resources allowed to be passed as launch contexts allowed for use in Ontario e-referral and other Questionnaires"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 * $resource-types#Patient
@@ -602,7 +618,7 @@ ValueSet: ONQuestionnaireTopic
 Id: topic-codes
 Title: "Topic Codes for Ontario Questionnaires"
 Description: "Codes used to categorize the focal topic(s) for Ontario e-referral and other Questionnaires"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 * $snomed#3457005 "Referral"
@@ -617,7 +633,7 @@ ValueSet: ONQuestionnaireMimeTypes
 Id: mime-types
 Title: "Mime Types of Ontario Questionnaires"
 Description: "Codes allowed for attachments in Ontario e-referral and other Questionnaires"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 /*
@@ -669,7 +685,7 @@ ValueSet: ONGroupItemControls
 Id: group-item-control
 Title: "Ontario Group Item Control Codes"
 Description: "Item control codes used in group items within Ontario questionnaires"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 * $questionnaire-item-control#list
@@ -680,18 +696,19 @@ ValueSet: ONQuestionItemControls
 Id: question-item-control
 Title: "Ontario Question Item Control Codes"
 Description: "Item control codes used in question items within Ontario questionnaires"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 * $questionnaire-item-control#check-box
 * $questionnaire-item-control#drop-down
 * $questionnaire-item-control#radio-button
+* ONItemControls#graphic-choice
 
 ValueSet: ONGroupQuestionType
 Id: question-item-type
 Title: "Ontario Question Item Type Codes"
 Description: "Item types allowed for use in question items in Ontario e-referral and other Questionnaires"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 * $item-type#attachment
@@ -706,11 +723,20 @@ Description: "Item types allowed for use in question items in Ontario e-referral
 * $item-type#text
 * $item-type#url
 
+CodeSystem: ONItemControls
+Id: on-item-controls
+Title: "Ontario Item Control Codes"
+Description: "Additional Questionnaire item control codes above and beyond those defined in the core extension"
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = false
+* #graphic-choice "Graphic Choice" "Indicates that the options for a choice question are presented as a clickable SVG diagram where clicking on diagram regions with an id that corresponds to a code within the choice"
+
 CodeSystem: ONCssStyles
 Id: on-css-styles
 Title: "Ontario Questionnaire CSS Styles"
 Description: "CSS styles used in various elements within the Questionnaire"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^caseSensitive = false
 * #color:red;text-decoration:underline; "Red, Underline"
@@ -735,7 +761,7 @@ ValueSet: ONNoteFlagStyles
 Id: note-flag-styles
 Title: "Ontario Note Flag Styles"
 Description: "Styles when rendering note content that is 'flagged'"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 * ONCssStyles#color:red;text-decoration:underline;
@@ -750,7 +776,7 @@ ValueSet: ONNoteStyles
 Id: note-styles
 Title: "Ontario Note Text Styles"
 Description: "Styles when rendering note content"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 * ONCssStyles#font-weight:bold;
@@ -762,7 +788,7 @@ ValueSet: ONItemStyles
 Id: item-styles
 Title: "Ontario Questionnaire Item Styles"
 Description: "Styles when rendering groups or questions"
-* ^status = #draft
+* ^status = #active
 * ^immutable = false
 * ^experimental = false
 * ONCssStyles#background-color:grey;
@@ -806,8 +832,6 @@ Title:    "Ontario Legacy Forms"
     * extension[enableWhenExpression].valueExpression.expression -> "@makeNoteIf"
     * extension[sortIndex].valuePositiveInt -> "@noteIndex"
     * extension[text].valueString -> "cNote"
-    * extension[ownLine].valueBoolean -> "@ownLine"
-    * extension[quoteAnswer].valueBoolean -> "@quoteAnswers"
     * extension[style].valueString -> "@flag"
     * extension[groupItems].valueBoolean -> "groupItems"
     * extension[listSeparator].valueString -> "listSep"
@@ -835,7 +859,9 @@ Title:    "Ontario Legacy Forms"
     * extension[negativeText].valueString -> "negNote"
     * extension[positiveText].valueString -> "posNote"
     * extension[negativeStyle].valueString -> "@negFlag"
-    * extension[studyColumnHeader].valueString -> "studyColumnHeader"
+//    * extension[studyColumnHeader].valueString -> "studyColumnHeader"
+    * extension[listSeparator].valueString -> "listSep"
+    * extension[lastSeparator].valueString -> "lastSep"
   * type -> "@type" "See mapping spreadsheet"
   * definition -> "@emrField" "These will need to be turned into data element URIs or mapped to standard FHIR element URIs"
   * repeats -> "@type" "True if CHECKBOX or MENU_MULTI_SELECT"

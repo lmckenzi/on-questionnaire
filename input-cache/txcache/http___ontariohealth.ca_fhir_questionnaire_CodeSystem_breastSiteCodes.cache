@@ -1,0 +1,102 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes",
+      "_system" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-system",
+          "valueCanonical" : "#breastSiteCodes"
+        }]
+      }
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes",
+      "_system" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-system",
+          "valueCanonical" : "#breastSiteCodes"
+        }]
+      }
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes",
+      "_system" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-system",
+          "valueCanonical" : "#breastSiteCodes"
+        }]
+      }
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "urn:uuid:53faaf6a-709e-4bae-b17d-0d1f16b0304a", "version": "1.0.0-draft"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "urn:uuid:f13fba58-857f-4c6c-8c42-cabcda2fa43b", "version": "1.0.0-draft"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "urn:uuid:725671e1-21e5-479f-9b84-34eedbbfd368", "version": "1.0.0-draft"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "urn:uuid:60a021a8-8d84-4409-863b-7b4d87410206", "version": "1.0.0-draft"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "urn:uuid:5392a598-625a-46b5-9e3e-faecab2d4ea9", "version": "1.0.0-draft"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "urn:uuid:ba7e877e-a929-413a-bc3d-92eed41a69d7", "version": "1.0.0-draft"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "urn:uuid:013aa3db-01fc-4953-b3b7-c3ed5ecb3c6f", "version": "1.0.0-draft"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"
+}
+-------------------------------------------------------------------------------------

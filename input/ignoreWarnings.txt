@@ -1,6 +1,96 @@
 == Suppressed Messages ==
+# This is a bug in the current release of the publisher
+A definition could not be found for Canonical URL 'http://www.rfc-editor.org/bcp/bcp13.txt'
+No definition could be found for URL value 'urn:ietf:bcp:13'
+
+# These are caused by a bug in the snapshot generation process
+ERROR: Ontario SDC Questionnaire profile.item.extension[[CanonicalType[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-collapsible]]].extension[[CanonicalType[http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-collapsible]]].Questionnaire.item.extension.value[x]: Binding http://ontariohealth.ca/fhir/questionnaire/ValueSet/item-styles is not a subset of binding http://hl7.org/fhir/uv/sdc/ValueSet/collapsible because The codes 'background-color:grey;border-style:solid;,background-color:white;,background-color:white;border-style:solid;,background-color:grey;,border-style:solid;' are not in the base valueset
+ERROR: Ontario SDC Questionnaire profile.item.extension[[CanonicalType[http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation]]].extension[[CanonicalType[http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation]]].Questionnaire.item.extension.value[x]: Binding http://ontariohealth.ca/fhir/questionnaire/ValueSet/item-styles is not a subset of binding http://hl7.org/fhir/ValueSet/choice-list-orientation because The codes 'background-color:grey;border-style:solid;,background-color:white;,background-color:white;border-style:solid;,background-color:grey;,border-style:solid;' are not in the base valueset
+
+# This should automatically be pinned.  The fact it's not is a bug in the publisher
+There are multiple different potential matches for the url 'http://hl7.org/fhir/questionnaire-item-control'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/questionnaire-item-control' to 'http://hl7.org/fhir/questionnaire-item-control|5.2.0'
+
+# These are all defined.  Believe the issues are triggered due to issues with the inter-version conversion process?
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[0].item[4].item[1].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[0].item[5].item[3].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[0].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[1].item[4].item[1].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[1].item[5].item[0].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[1].item[19].item[1].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[0].item[0].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[0].item[1].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[2].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[4].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[6].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[7].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[8].item[9].item[0].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[8].item[9].item[1].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[8].item[9].item[2].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[9].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[11].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[13].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[15].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[16].item[7].item[1].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[17].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[18].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[20].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[2].item[1].item[22].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[1]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[2]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[3]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[4]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[5]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[6]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[7]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[8]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[9]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[10]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[11]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[12]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[13]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[6].extension[14]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.item[7].item[1].item[3].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Questionnaire/note-tester: Questionnaire: Questionnaire.extension: Found 1 match, but unable to check minimum required (Questionnaire.extension) due to lack of slicing validation (from http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft)
+INFORMATION: Questionnaire/note-tester: Questionnaire.item[0].extension[0]: This element does not match any known slice defined in the profile http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# The FHIR terminology service doesn't know how to validate contained code systems
+INFORMATION: Questionnaire/note-tester: Questionnaire.contained[3]/*CodeSystem/breastSiteCodes*/: CodeSystems are referred to directly from Coding.system, so it's generally best for them not to be contained resources
+A definition for CodeSystem 'http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes' could not be found, so the code cannot be validated
+No definition could be found for URL value 'http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes'
+The code provided LAUX cannot be validated in the options value set (ValueSet[null]) in the questionnaire because the system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes could not be found
+The code provided R1 cannot be validated in the options value set (ValueSet[null]) in the questionnaire because the system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes could not be found
+Error from https://tx.fhir.org/r4: Unable to provide support for code system http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes
+
+# These errors relate to inter-version extensions and should be fixed when the next inter-version extensions pack comes out
+No definition could be found for URL value 'http://hl7.org/fhir/version-algorithm'
+Questionnaire.extension:versionAlgorithm: Found 0 matches, but unable to check minimum required (Questionnaire.extension) due to lack of slicing validation (from http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire|1.0.0-draft)
+Slicing cannot be evaluated: Unable to resolve profile CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-Questionnaire.versionAlgorithm%5Bx%5D]
+Unknown Code System 'http://hl7.org/fhir/version-algorithm'
+
+# These warnings are caused by issues in the current extensions pack.  They will go away when the next pack is released and the IG changes dependency to point to that instead
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/behavior.html#itemWeight' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/behavior.html#maxOccurs' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/behavior.html#maxSize' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/behavior.html#maxValue' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/behavior.html#mimeType' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/behavior.html#minLength' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/behavior.html#minOccurs' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/behavior.html#minValue' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/behavior.html#variable' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/rendering.html#choiceOrientation' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/rendering.html#hidden' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/rendering.html#itemControl' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/rendering.html#rendering-style' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/rendering.html#rendering-xhtml' for "SDC implementation guide" cannot be resolved
+The link 'http://hl7.org/fhir/uv/sdc/STU4-ballot/rendering.html#supportLink' for "SDC implementation guide" cannot be resolved
+
 # 5.2.0 of extensions is indeed what's wanted
 %5.2.0 from choices of 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+%5.2.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+
+# In this case, a trailing space is intentional and necessary
+WARNING: Questionnaire/note-tester: Questionnaire.item[0].item[2].extension[0].extension[0].value.ofType(string): value should not start or finish with whitespace '; '
 
 # This HTML content is not a risk if rendered.  It contains no links or executable code
 INFORMATION: StructureDefinition/sdc-questionnaire-ontario: StructureDefinition.snapshot.element[374].mapping[0].comment: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
@@ -9,5 +99,102 @@ INFORMATION: StructureDefinition/sdc-questionnaire-ontario: StructureDefinition.
 # This extension is specifically intended to contain HTML
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
-# There's zero use for an OID in this context
+# There's zero use for OIDs in this context
 The resource Questionnaire/20250321Hematology could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+The resource Questionnaire/note-tester could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+# These stem from how content is defined in the R4 core spec.
+Reference to draft CodeSystem http://hl7.org/fhir/item-type|4.0.1
+
+# The use of these extensions is inherited from the core spec, so there's no way to change to the non-deprecated representation
+INFORMATION: StructureDefinition/sdc-questionnaire: StructureDefinition.snapshot.element[144].type[0].extension[1]: The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
+INFORMATION: StructureDefinition/sdc-questionnaire: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+# These are strongly encouraged when using the HL7 IG Publisher.  
+# However, long-term publication of this specification is likely to be via Simplifier.
+# This information is still relevant however, so inclusion of equivalent capabilities in the Simplifier space are still appropriate/desired
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+
+# These are genuine issues with the 'standard' Questionnaire.  They will need to be addressed by making the relevant dependencies available.
+# (Strongly suggest *not* using UUIDs for Questionnaire fragments)
+WARNING: Questionnaire/20250321Hematology: Questionnaire.item[0].item[0].definition: No definition could be found for URL value 'http://ehealthontario.ca/fhir/StructureDefinition/ca-on-eReferral-profile-Patient#Patient.name.family'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.item[0].item[0].extension[0].extension[0].value.ofType(uri): No definition could be found for URL value 'http://ehealthontario.ca/fhir/StructureDefinition/ca-on-eReferral-profile-Patient#Patient.name.use'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.item[0].item[0].extension[1].extension[0].value.ofType(canonical): A definition could not be found for Canonical URL 'http://ehealthontario.ca/fhir/StructureDefinition/ca-on-eReferral-profile-Patient'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.item[1].item[4].extension[1].value.ofType(url): No definition could be found for URL value 'http://ehealthontario.ca/fhir/ValueSet/human-language'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.item[1].item[6].extension[1].value.ofType(url): No definition could be found for URL value 'https://fhir.infoway-inforoute.ca/ValueSet/sharedyesnounknown'
+ERROR: Questionnaire/20250321Hematology: Questionnaire.item[1].item[7].enableWhen[0].answer.ofType(Coding).display: Wrong Display Name 'Alternate contact' for http://terminology.hl7.org/CodeSystem/v2-0532#Y. Valid display is 'Yes' (for the language(s) 'en')
+ERROR: Questionnaire/20250321Hematology: Questionnaire.item[1].item[8].enableWhen[0].answer.ofType(Coding).display: Wrong Display Name 'Alternate contact' for http://terminology.hl7.org/CodeSystem/v2-0532#Y. Valid display is 'Yes' (for the language(s) 'en')
+ERROR: Questionnaire/20250321Hematology: Questionnaire.item[1].item[9].enableWhen[0].answer.ofType(Coding).display: Wrong Display Name 'Alternate contact' for http://terminology.hl7.org/CodeSystem/v2-0532#Y. Valid display is 'Yes' (for the language(s) 'en')
+INFORMATION: Questionnaire/20250321Hematology: Questionnaire.code[0].code: The code '310057003' is valid but is not active
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[0].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:aa869e3c-0849-49d3-8968-a8c493c66ba5'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[10].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:f4e2db7a-cc70-4f87-bf07-3548f1ae0843'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[11].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:72cc95cb-9ca7-4556-8a24-5b20d3bf9599'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[12].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:8c321168-51b2-4d7d-ab76-af8760e82809'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[13].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:c1cacdb7-da28-454a-ae1b-ce6be1daf269'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[14].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:4a2728d9-6d31-4af1-9b36-92d153e0fb2b'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[15].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:6fa8ba97-9a23-4c96-99da-0c6820de9b7e'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[16].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:8c039458-c3c2-4e78-90ab-9266a18a5b01'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[17].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:6009d229-5634-43d1-9456-bbe903c8d637'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[18].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:4de1b851-da55-4ebd-8a1a-17bd36470f48'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[19].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:a622e0dd-ebec-489c-9279-8fbc5cc73537'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[1].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:62fadfad-29fc-448d-b7aa-aeee514afe42'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[20].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:fe46f033-1583-488f-a266-5728cc25673d'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[21].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:c8411784-f4c4-4b17-8c34-01d641f46398'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[22].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:0a7027b9-3ff2-44bd-9219-109b131cef29'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[23].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:be6d4871-e783-4e14-9113-9b0cc6fa8c43'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[24].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:fdd49a9e-fbc3-4cc9-bb52-2e3b86f406d9'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[25].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:f2491af0-4b49-4c5a-9b5f-a3e00134428a'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[26].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:896e3da2-2df4-4c5d-94fa-8b59800027b4'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[27].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:00872ec0-f110-45dc-a4c5-0fc99f937908'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[28].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:2a9a8210-97e5-4b30-89b2-46bcc5b6607f'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[29].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:dd0df4a2-0a2e-4295-92f3-d40a505308cf'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[2].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:1f34dd89-29a2-4117-8235-acfb1bbcc9a6'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[30].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:e4f10046-3311-44ac-96b4-6e4d63a44676'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[31].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:1ec36f62-4193-446d-baf1-2bfd3d37fe2e'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[32].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:200821bd-ed87-4ebb-9134-52f1959d4458'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[34].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:aa869e3c-0849-49d3-8968-a8c493c66ba5'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[35].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:62fadfad-29fc-448d-b7aa-aeee514afe42'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[36].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:3cda1f11-7591-4a56-8b31-efc019898fc2'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[37].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:263c6a08-d2be-45cf-bc18-cfb5daccbca6'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[38].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:1f34dd89-29a2-4117-8235-acfb1bbcc9a6'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[39].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:85d74dd9-74bf-4dc2-ac4a-ecfa2e33bbee'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[3].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:85d74dd9-74bf-4dc2-ac4a-ecfa2e33bbee'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[40].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:e4aac45a-86b6-4e39-9157-1cb145db3157'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[41].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:c1f6022c-a244-4661-a017-4e0b165ea6f9'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[42].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:3a7650e6-e840-4a48-8d68-d3b655a66627'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[43].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:46ed6d53-c6a0-4480-b081-5115feef5b36'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[44].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:53fe4afa-9dfe-47a2-9707-6356c772d973'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[45].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:9fe26b08-fa83-431e-88dc-d45444069eeb'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[46].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:f4e2db7a-cc70-4f87-bf07-3548f1ae0843'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[47].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:72cc95cb-9ca7-4556-8a24-5b20d3bf9599'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[48].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:8c321168-51b2-4d7d-ab76-af8760e82809'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[49].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:c1cacdb7-da28-454a-ae1b-ce6be1daf269'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[4].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:e4aac45a-86b6-4e39-9157-1cb145db3157'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[50].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:4a2728d9-6d31-4af1-9b36-92d153e0fb2b'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[51].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:6fa8ba97-9a23-4c96-99da-0c6820de9b7e'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[52].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:8c039458-c3c2-4e78-90ab-9266a18a5b01'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[53].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:653be9b6-58e2-41da-82cc-75cb9614e4bf'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[54].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:4de1b851-da55-4ebd-8a1a-17bd36470f48'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[55].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:a622e0dd-ebec-489c-9279-8fbc5cc73537'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[56].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:fe46f033-1583-488f-a266-5728cc25673d'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[57].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:c8411784-f4c4-4b17-8c34-01d641f46398'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[58].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:0a7027b9-3ff2-44bd-9219-109b131cef29'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[59].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:be6d4871-e783-4e14-9113-9b0cc6fa8c43'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[5].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:c1f6022c-a244-4661-a017-4e0b165ea6f9'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[60].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:a0bcddce-b100-416e-b9c9-4ca027c2741c'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[61].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:f8233167-8424-47a4-a216-a832a77cef2d'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[62].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:eb1a0e30-670b-45c6-996d-d2c2592d49e3'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[63].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:f2491af0-4b49-4c5a-9b5f-a3e00134428a'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[64].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:896e3da2-2df4-4c5d-94fa-8b59800027b4'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[65].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:00872ec0-f110-45dc-a4c5-0fc99f937908'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[66].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:2a9a8210-97e5-4b30-89b2-46bcc5b6607f'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[67].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:dd0df4a2-0a2e-4295-92f3-d40a505308cf'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[68].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:e4f10046-3311-44ac-96b4-6e4d63a44676'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[69].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:1ec36f62-4193-446d-baf1-2bfd3d37fe2e'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[6].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:3a7650e6-e840-4a48-8d68-d3b655a66627'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[70].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:200821bd-ed87-4ebb-9134-52f1959d4458'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[7].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:46ed6d53-c6a0-4480-b081-5115feef5b36'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[8].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:53fe4afa-9dfe-47a2-9707-6356c772d973'
+WARNING: Questionnaire/20250321Hematology: Questionnaire.extension[9].value.ofType(canonical): A definition could not be found for Canonical URL 'uri:uuid:9fe26b08-fa83-431e-88dc-d45444069eeb'

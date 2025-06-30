@@ -51,3 +51,11 @@ resources:
     name: Example Standard Questionnaire
     description: A sample questionnaire that attempts to expose the range of functionality supported in the Ontario Questionnaire profile
     exampleCanonical: http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire
+  Questionnaire/note-tester:
+    name: Example Note Questionnaire
+    description: A sample questionnaire showing notes and diagram handling
+    exampleCanonical: http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/sdc-questionnaire
+  QuestionnaireResponse/note-tester-response:
+    name: Example Note Questionnaire response
+    description: A sample response to the Example Note Questionnaire
+    exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse

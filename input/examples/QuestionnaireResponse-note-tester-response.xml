@@ -4,8 +4,12 @@
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <span>Best Method of Contact: Business #</span><br/>
-      <span>Voicemails generally acceptable: No</span><br/>
+      <div style="font-weight:bold;">
+        <p>Example Questions</p>
+        <span>Best Method of Contact: Business #</span><br/>
+        <span>Voicemails generally acceptable: No</span><br/>
+        <span>Targeted to area of interest: </span><span>RIGHT Upper-Inner Quadrant - 1 o'clock</span>; <span>LEFT Axillary Tail</span>
+      </div>
     </div>
   </text>
   <questionnaire value="http://ontariohealth.ca/fhir/questionnaire/Questionnaire/note-tester"/>
@@ -15,20 +19,43 @@
   </subject>
   <authored value="2025-06-26"/>
   <item>
-    <linkId value="BestContactMethod"/>
-    <text value="Best method of contact"/>
-    <answer>
-      <valueCoding>
-        <code value="BUSINESS"/>
-        <display value="Business #"/>
-      </valueCoding>
-    </answer>
-  </item>
-  <item>
-    <linkId value="item73068595"/>
-    <text value="Voicemails acceptable"/>
-    <answer>
-      <valueBoolean value="false"/>
-    </answer>
+    <linkId value="example"/>
+    <text value="Example Questions"/>
+    <item>
+      <linkId value="BestContactMethod"/>
+      <text value="Best method of contact"/>
+      <answer>
+        <valueCoding>
+          <system value="http://hl7.org/fhir/contact-point-use"/>
+          <code value="work"/>
+          <display value="Work"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="item73068595"/>
+      <text value="Voicemails acceptable"/>
+      <answer>
+        <valueBoolean value="false"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="section89997639"/>
+      <text value="Targeted to area of interest"/>
+      <answer>
+        <valueCoding>
+          <system value="http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"/>
+          <code value="R1"/>
+          <display value="RIGHT Upper-Inner Quadrant - 1 o'clock"/>
+        </valueCoding>    
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://ontariohealth.ca/fhir/questionnaire/CodeSystem/breastSiteCodes"/>
+          <code value="LAUX"/>
+          <display value="LEFT Axillary Tail"/>
+        </valueCoding>    
+      </answer>
+    </item>
   </item>
 </QuestionnaireResponse>

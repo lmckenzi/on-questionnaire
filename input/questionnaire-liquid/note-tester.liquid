@@ -1,0 +1,86 @@
+<!-- Liquid template version: 0.4.6 -->
+<div>
+  <div style="font-weight:bold;">
+    <p>Example Questions</p>
+    {% for grp in %resource.item.where(linkId='example') %}
+      {% if grp.item.where(linkId='BestContactMethod').answer.valueCoding.code == 'OTHER' %}
+        <span>Best Method of Contact: Mobile #</span><br/>
+      {% elsif grp.item.where(linkId='BestContactMethod').answer.valueCoding.code == 'HOME' %}
+        <span>Best Method of Contact: Home #</span><br/>
+      {% elsif grp.item.where(linkId='BestContactMethod').answer.valueCoding.code == 'HOME' %}
+        <span>Best Method of Contact: Business #</span><br/>
+      {% endif %}
+      {% if grp.item.where(linkId='BestContactMethod').answer.exists() %}
+        {% if grp.item.where(linkId='BestContactMethod').answer.valueBoolean == false %}
+          <span>Voicemails generally acceptable: No</span><br/>
+        {% elsif grp.item.where(linkId='BestContactMethod').answer.valueBoolean == true %}
+          <span>Voicemails generally acceptable: Yes</span><br/>
+        {% endif %}
+      {% endif %}
+      {% if grp.item.where(linkId='AreaOfInterest').answer.exists() %}
+        <span>Targeted to area of interest: </span>
+        {% for loc in grp.item.where(linkId='AreaOfInterest').answer.valueCoding.code  %}
+          {% if forloop.first == false %}<span>; </span> {% endif %}
+          {% if loc == 'RAUX">
+            <span>RIGHT Axillary Tail</span>
+          {% elsif loc == 'R1">
+            <span>RIGHT Upper-Inner Quadrant - 1 o'clock</span>
+          {% elsif loc == 'R2">
+            <span>RIGHT Upper-Inner Quadrant - 2 o'clock</span>
+          {% elsif loc == 'R3">
+            <span>RIGHT Centre-Inner Quadrant - 3 o'clock</span>
+          {% elsif loc == 'R4">
+            <span>RIGHT Inner Quadrant - 4 o'clock</span>
+          {% elsif loc == 'R5">
+            <span>RIGHT Lower-Inner Quadrant - 5 o'clock</span>
+          {% elsif loc == 'R6">
+            <span>RIGHT Lower Quadrant - 6 o'clock</span>
+          {% elsif loc == 'R7">
+            <span>RIGHT Lower-Outer Quadrant - 7 o'clock</span>
+          {% elsif loc == 'R8">
+            <span>RIGHT Lower-Outer Quadrant - 8 o'clock</span>
+          {% elsif loc == 'R9">
+            <span>RIGHT Outer Quadrant - 9 o'clock</span>
+          {% elsif loc == 'R10">
+            <span>RIGHT Upper-Outer Quadrant - 10 o'clock</span>
+          {% elsif loc == 'R11">
+            <span>RIGHT Upper-Outer Quadrant - 11 o'clock</span>
+          {% elsif loc == 'R12">
+            <span>RIGHT Upper Quadrant - 12 o'clock</span>
+          {% elsif loc == 'RNIP">
+            <span>RIGHT Nipple/Centre</span>
+          {% elsif loc == 'LAUX">
+            <span>LEFT Axillary Tail</span>
+          {% elsif loc == 'L1">
+            <span>LEFT Upper-Outer Quadrant - 1 o'clock</span>
+          {% elsif loc == 'L2">
+            <span>LEFT Upper-Outer Quadrant - 2 o'clock</span>
+          {% elsif loc == 'L3">
+            <span>LEFT Outer Quadrant - 3 o'clock</span>
+          {% elsif loc == 'L4">
+            <span>LEFT Lower-Outer Quadrant - 4 o'clock</span>
+          {% elsif loc == 'L5">
+            <span>LEFT Lower-Outer Quadrant - 5 o'clock</span>
+          {% elsif loc == 'L6">
+            <span>LEFT Lower Quadrant - 6 o'clock</span>
+          {% elsif loc == 'L7">
+            <span>LEFT Lower-Inner Quadrant - 7 o'clock</span>
+          {% elsif loc == 'L8">
+            <span>LEFT Lower-Inner Quadrant - 8 o'clock</span>
+          {% elsif loc == 'L9">
+            <span>LEFT Inner Quadrant - 9 o'clock</span>
+          {% elsif loc == 'L10">
+            <span>LEFT Upper-Inner Quadrant - 10 o'clock</span>
+          {% elsif loc == 'L11">
+            <span>LEFT Upper-Inner Quadrant - 11 o'clock</span>
+          {% elsif loc == 'L12">
+            <span>LEFT Upper-Inner Quadrant - 12 o'clock</span>
+          {% elsif loc == 'LNIP">
+            <span>LEFT Nipple/Centre</span>
+          {% endif %}
+        {% endfor %}
+        <br/>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

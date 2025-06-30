@@ -294,18 +294,37 @@
     {
       "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation",
       "valueCode": "assemble-root"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-entryMode",
+      "valueCode": "random"
     }
   ],
   "url": "urn:uuid:c22adf2b-46ea-4581-9aa9-dc1f005ea464",
   "version": "2.0",
   "title": "Hematology - Standardized Provincial Form Template",
+  "_title": {
+    "extension": [{
+      "url": "http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/core-short-string",
+      "valueString": "Hematology"
+    }]
+  },
+  "description": "A 'standard' form developed using FHIR-based Questionnaire tools intended to demonstrate the range of Questionnaire capabilities needed by form fillers",
+  "_description": {
+    "extension": [{
+      "url": "http://ontariohealth.ca/fhir/questionnaire/StructureDefinition/core-short-string",
+      "valueString": "A standard demo form"
+    }]
+  },
   "status": "active",
+  "experimental": false,
   "date": "2025-03-21T21:47:22.960+00:00",
   "publisher": "Ontario Health & eHealth Centre of Excellence",
   "approvalDate": "2025-03-21",
   "effectivePeriod": {
     "start": "2025-01-21"
   },
+  "subjectType": ["Patient"],
   "code": [
     {
       "system": "http://snomed.info/sct",
@@ -5165,15 +5184,7 @@
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "image/gif"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
           "valueCode": "image/bmp"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
@@ -5181,55 +5192,11 @@
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/vnd.ms-xpsdocument"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "audio/wav"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "video/3gpp2"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
           "valueCode": "video/mp4"
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "video/mpeg"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/octet-stream"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "audio/x-ms-wma"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "video/x-flv"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/vnd.ms-works"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
           "valueCode": "text/csv"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/vnd.openxmlformats-officedocument.presentationml.slideshow"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/dicom"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "image/x-adobe-dng"
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
@@ -5257,51 +5224,11 @@
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/rtf"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "video/3gpp"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "video/x-msvideo"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "video/x-ms-wmv"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "video/quicktime"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "video/ogg"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "audio/ogg"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
           "valueCode": "audio/mp4"
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
           "valueCode": "audio/mpeg"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/vnd.lotus-1-2-3"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/vnd.ms-powerpoint"
-        },
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/mimeType",
-          "valueCode": "application/vnd.wordperfect"
         },
         {
           "url": "http://hl7.org/fhir/StructureDefinition/mimeType",

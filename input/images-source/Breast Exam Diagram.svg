@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="136mm"
+   height="73mm"
+   viewBox="0 0 136 73"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="Breast Exam Diagram.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title79">Breast Exam Diagram</title>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.52"
+     inkscape:cx="187.17105"
+     inkscape:cy="218.75"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch2"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="swatch1"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       d="m 42.597907,40.787296 -0.06614,13.824402"
+       id="path13-5" />
+    <g
+       id="RNIP"
+       inkscape:label="#RNIP"
+       transform="translate(-7.4083337,-102.12924)">
+      <title
+         id="title75">RIGHT Nipple/Centre</title>
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+         d="M 58.095238,135 A 8.0952377,8.0952377 0 0 0 50,126.90476 8.0952377,8.0952377 0 0 0 41.904762,135 8.0952377,8.0952377 0 0 0 50,143.09523 8.0952377,8.0952377 0 0 0 58.095238,135 Z"
+         id="path30" />
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+         d="M 47.3,135 A 2.7,2.7 0 0 1 50,132.3 2.7,2.7 0 0 1 52.7,135 2.7,2.7 0 0 1 50,137.7 2.7,2.7 0 0 1 47.3,135 Z"
+         id="path29" />
+    </g>
+    <path
+       d="m 42.592228,33.390288 v 5.2e-4 l 7.821228,2.067038 a 8.0952377,8.0952377 0 0 0 0,-5.1e-4 l -7.820712,-2.067048 z"
+       style="fill:#00c8c8;fill-rule:evenodd;stroke-width:0.814"
+       id="path55" />
+    <path
+       d="M 63.86173,39.011108 50.413456,35.457336 a 8.0952377,8.0952377 0 0 0 0,5.1e-4 l 13.448274,3.553772 a 22,22 0 0 1 0,-5.1e-4 z"
+       style="fill:#00c8c8;fill-rule:evenodd;stroke-width:0.814"
+       id="path42" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+       d="m 93.431459,40.698059 0.0661,13.824399"
+       id="path13-5-9" />
+    <g
+       id="LNIP"
+       inkscape:label="#LNIP"
+       transform="matrix(-1,0,0,1,143.43767,-102.21848)">
+      <title
+         id="title75-1">LEFT Nipple/Centre</title>
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+         d="M 58.095238,135 A 8.0952377,8.0952377 0 0 0 50,126.90476 8.0952377,8.0952377 0 0 0 41.904762,135 8.0952377,8.0952377 0 0 0 50,143.09523 8.0952377,8.0952377 0 0 0 58.095238,135 Z"
+         id="path30-8" />
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+         d="M 47.3,135 A 2.7,2.7 0 0 1 50,132.3 2.7,2.7 0 0 1 52.7,135 2.7,2.7 0 0 1 50,137.7 2.7,2.7 0 0 1 47.3,135 Z"
+         id="path29-2" />
+    </g>
+    <g
+       id="g78"
+       transform="translate(-7.4083337,-102.12924)">
+      <g
+         id="g76">
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.498815;stroke-dasharray:none;stroke-opacity:1"
+           d="m 58.048213,134.91665 13.636436,0.0244"
+           id="path10-9"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+           d="m 28.045829,134.91313 c 13.692187,0 13.626041,-0.0661 13.626041,-0.0661"
+           id="path11-8" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+           d="m 49.9401,126.84334 c 0,-13.69219 0,-13.69219 0,-13.69219"
+           id="path12-6" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499378;stroke-dasharray:none;stroke-opacity:1"
+           d="M 28.333891,133.10245 A 21.749045,21.749036 0 0 0 48.102433,156.6661 21.749045,21.749036 0 0 0 71.666106,136.89757 21.749045,21.749036 0 0 0 51.897563,113.33389 21.749045,21.749036 0 0 0 28.333891,133.10245 Z"
+           id="path31" />
+        <path
+           id="path9-89"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.447777;stroke-dasharray:none;stroke-opacity:1"
+           d="m 28.209565,134.95258 c -1.82e-4,12.02667 9.74926,21.77634 21.775932,21.77644 12.026874,1.9e-4 21.776629,-9.74957 21.776448,-21.77644 -8.2e-5,-0.0605 -4.15e-4,-0.12093 -10e-4,-0.18139"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+           d="m 28.227361,135.05935 c 0.239797,-3.0752 0.358842,-6.1504 2.043059,-9.2256 1.560271,-3.19442 2.343478,-7.50498 2.047042,-11.62775 -0.377671,-3.46677 -0.358505,-6.73509 -3.35603,-9.76521"
+           id="path14"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+           d="M 9.8139527,161.54205 21.30244,113.15115 c 0.566424,30.01628 13.635523,40.05126 11.836622,60.04649"
+           id="path15"
+           sodipodi:nodetypes="ccc" />
+      </g>
+      <g
+         id="g76-6"
+         transform="matrix(-1,0,0,1,150.84605,-0.08924391)">
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.498815;stroke-dasharray:none;stroke-opacity:1"
+           d="m 58.048213,134.91665 13.636436,0.0244"
+           id="path10-9-6"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+           d="m 28.045829,134.91313 c 13.692187,0 13.626041,-0.0661 13.626041,-0.0661"
+           id="path11-8-0" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+           d="m 49.9401,126.84334 c 0,-13.69219 0,-13.69219 0,-13.69219"
+           id="path12-6-3" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#afafaf;stroke-width:0.499378;stroke-dasharray:none;stroke-opacity:1"
+           d="M 28.333891,133.10245 A 21.749045,21.749036 0 0 0 48.102433,156.6661 21.749045,21.749036 0 0 0 71.666106,136.89757 21.749045,21.749036 0 0 0 51.897563,113.33389 21.749045,21.749036 0 0 0 28.333891,133.10245 Z"
+           id="path31-8" />
+        <path
+           id="path9-89-0"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.447777;stroke-dasharray:none;stroke-opacity:1"
+           d="m 28.209565,134.95258 c -1.82e-4,12.02667 9.74926,21.77634 21.775932,21.77644 12.026874,1.9e-4 21.776629,-9.74957 21.776448,-21.77644 -8.2e-5,-0.0605 -4.15e-4,-0.12093 -10e-4,-0.18139"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+           d="m 28.227361,135.05935 c 0.239797,-3.0752 0.358842,-6.1504 2.043059,-9.2256 1.560271,-3.19442 2.343478,-7.50498 2.047042,-11.62775 -0.377671,-3.46677 -0.358505,-6.73509 -3.35603,-9.76521"
+           id="path14-1"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
+           d="M 9.8139527,161.54205 21.30244,113.15115 c 0.566424,30.01628 13.635523,40.05126 11.836622,60.04649"
+           id="path15-2"
+           sodipodi:nodetypes="ccc" />
+      </g>
+    </g>
+    <ellipse
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0855113;stroke-dasharray:none;stroke-opacity:1"
+       id="LAUX"
+       ry="12.62647"
+       rx="5.432992"
+       cy="18.284054"
+       cx="-116.04702"
+       transform="matrix(-0.99938623,0.03503102,0.03339949,0.99944208,0,0)"
+       inkscape:label="#LAUX">
+      <title
+         id="title77">LEFT Axillary Tail</title>
+    </ellipse>
+    <path
+       d="m 114.66837,38.539461 -13.41365,-3.643689 a 8.0952377,8.0952377 0 0 0 0.0145,-4.190939 8.0952377,8.0952377 0 0 0 -5.1e-4,-0.002 l 13.43897,-3.551189 a 22,22 0 0 1 -0.0393,11.387877 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L3"
+       inkscape:label="#L3">
+      <title
+         id="title71-9">LEFT Outer Quadrant - 3 o'clock</title>
+    </path>
+    <path
+       d="m 72.167644,38.393211 13.448274,-3.553769 a 8.0952377,8.0952377 0 0 0 5.17e-4,0.002 8.0952377,8.0952377 0 0 0 2.07946,3.632829 l -9.868132,9.800383 a 22,22 0 0 1 -5.660119,-9.881513 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L8"
+       inkscape:label="#L8">
+      <title
+         id="title63-7">LEFT Lower-Inner Quadrant - 8 o'clock</title>
+    </path>
+    <path
+       d="m 93.437139,33.301051 v 5.2e-4 l -7.821221,2.067038 a 8.0952377,8.0952377 0 0 1 0,-5.1e-4 l 7.820711,-2.067048 z"
+       style="fill:#00c8c8;fill-rule:evenodd;stroke-width:0.814"
+       id="path55-8" />
+    <path
+       d="m 72.167644,38.921868 13.448274,-3.553769 a 8.0952377,8.0952377 0 0 1 0,5.1e-4 l -13.448274,3.553769 a 22,22 0 0 0 0,-5.1e-4 z"
+       style="fill:#00c8c8;fill-rule:evenodd;stroke-width:0.814"
+       id="path42-3" />
+    <path
+       d="m 72.206918,27.004824 13.423987,3.646792 a 8.0952377,8.0952377 0 0 0 -0.01499,4.187316 l -13.448274,3.553769 a 22,22 0 0 1 0.03927,-11.387877 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L9"
+       inkscape:label="#L9">
+      <title
+         id="title66-1">LEFT Inner Quadrant - 9 o'clock</title>
+    </path>
+    <path
+       d="m 77.93525,17.162591 9.800952,9.869103 a 8.0952377,8.0952377 0 0 0 -2.105297,3.619922 L 72.206918,27.004824 a 22,22 0 0 1 5.728332,-9.842233 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L10"
+       inkscape:label="#L10">
+      <title
+         id="title65-0">LEFT Upper-Inner Quadrant - 10 o'clock</title>
+    </path>
+    <path
+       d="m 87.816818,11.502504 3.553271,13.445612 a 8.0952377,8.0952377 0 0 0 -3.633887,2.083578 L 77.93525,17.162591 a 22,22 0 0 1 9.881568,-5.660087 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L11"
+       inkscape:label="#L11">
+      <title
+         id="title64-6">LEFT Upper-Inner Quadrant - 11 o'clock</title>
+    </path>
+    <path
+       d="m 93.513629,10.772317 a 22,22 0 0 1 5.691087,0.769457 l -3.644719,13.418222 a 8.0952377,8.0952377 0 0 0 -4.185257,-0.0134 8.0952377,8.0952377 0 0 0 -0.0047,0.002 L 87.816769,11.502984 a 22,22 0 0 1 5.69681,-0.730187 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L12"
+       inkscape:label="#L12">
+      <title
+         id="title74-0">LEFT Upper-Inner Quadrant - 12 o'clock</title>
+    </path>
+    <path
+       d="m 109.04752,17.269561 -9.863994,9.796243 a 8.0952377,8.0952377 0 0 0 -3.623529,-2.105808 l 3.644719,-13.418222 a 22,22 0 0 1 9.842804,5.727787 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L1"
+       inkscape:label="#L1">
+      <title
+         id="title73-1">LEFT Upper-Outer Quadrant - 1 o'clock</title>
+    </path>
+    <path
+       d="m 114.70764,27.151584 -13.43897,3.551189 a 8.0952377,8.0952377 0 0 0 -2.085144,-3.636969 l 9.863994,-9.796243 a 22,22 0 0 1 5.66012,9.882023 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L2"
+       inkscape:label="#L2">
+      <title
+         id="title72-9">LEFT Upper-Outer Quadrant - 2 o'clock</title>
+    </path>
+    <path
+       d="m 108.94055,48.382214 -9.795264,-9.862913 a 8.0952377,8.0952377 0 0 0 2.109434,-3.623529 l 13.41365,3.643689 a 22,22 0 0 1 -5.72782,9.842753 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L4"
+       inkscape:label="#L4">
+      <title
+         id="title70-4">LEFT Lower-Outer Quadrant - 4 o'clock</title>
+    </path>
+    <path
+       d="M 99.058476,54.041781 95.506257,40.600819 a 8.0952377,8.0952377 0 0 0 0.005,-0.001 8.0952377,8.0952377 0 0 0 3.634379,-2.080488 l 9.795264,9.862913 a 22,22 0 0 1 -9.882074,5.659567 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L5"
+       inkscape:label="#L5">
+      <title
+         id="title69-4">LEFT Lower-Outer Quadrant - 5 o'clock</title>
+    </path>
+    <path
+       d="m 87.670573,54.002511 3.645256,-13.418742 a 8.0952377,8.0952377 0 0 0 4.190428,0.017 l 3.552219,13.440962 a 22,22 0 0 1 -11.387903,-0.0393 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L6"
+       inkscape:label="#L6">
+      <title
+         id="title68-9">LEFT Lower Quadrant - 6 o'clock</title>
+    </path>
+    <path
+       d="m 77.827763,48.274724 9.868132,-9.800383 a 8.0952377,8.0952377 0 0 0 3.619934,2.109428 l -3.645256,13.418742 a 22,22 0 0 1 -9.84281,-5.727787 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="L7"
+       inkscape:label="#L7">
+      <title
+         id="title67-8">LEFT Lower-Inner Quadrant - 7 o'clock</title>
+    </path>
+    <ellipse
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0855113;stroke-dasharray:none;stroke-opacity:1"
+       id="RAUX"
+       ry="12.62647"
+       rx="5.432992"
+       cy="13.607974"
+       cx="19.91024"
+       transform="matrix(0.99938623,0.03503102,-0.03339949,0.99944208,0,0)"
+       inkscape:label="#RAUX">
+      <title
+         id="title78">RIGHT Axillary Tail</title>
+    </ellipse>
+    <path
+       d="m 21.360965,38.628698 13.413652,-3.643689 a 8.0952377,8.0952377 0 0 1 -0.01447,-4.190936 8.0952377,8.0952377 0 0 1 5.16e-4,-0.002 L 21.32169,27.240884 a 22,22 0 0 0 0.03927,11.387874 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R9"
+       inkscape:label="#R9">
+      <title
+         id="title71">RIGHT Outer Quadrant - 9 o'clock</title>
+    </path>
+    <path
+       d="M 63.86173,38.482451 50.413456,34.928679 a 8.0952377,8.0952377 0 0 1 -5.17e-4,0.002 8.0952377,8.0952377 0 0 1 -2.07946,3.632832 l 9.868132,9.800383 a 22,22 0 0 0 5.660119,-9.881513 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R4"
+       inkscape:label="#R4">
+      <title
+         id="title63">RIGHT Inner Quadrant - 4 o'clock</title>
+    </path>
+    <path
+       d="m 63.822456,27.094064 -13.423987,3.646789 a 8.0952377,8.0952377 0 0 1 0.01499,4.187316 l 13.448274,3.553772 a 22,22 0 0 0 -0.03927,-11.387877 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R3">
+      <title
+         id="title66">RIGHT Centre-Inner Quadrant - 3 o'clock</title>
+    </path>
+    <path
+       d="m 58.094124,17.251831 -9.800952,9.869103 a 8.0952377,8.0952377 0 0 1 2.105297,3.619919 l 13.423987,-3.646789 a 22,22 0 0 0 -5.728332,-9.842233 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R2">
+      <title
+         id="title65">RIGHT Upper-Inner Quadrant - 2 o'clock</title>
+    </path>
+    <path
+       d="m 48.212556,11.591744 -3.553271,13.445612 a 8.0952377,8.0952377 0 0 1 3.633887,2.083578 l 9.800952,-9.869103 a 22,22 0 0 0 -9.881568,-5.660087 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R1">
+      <title
+         id="title64">RIGHT Upper-Inner Quadrant - 1 o'clock</title>
+    </path>
+    <path
+       d="m 42.515746,10.861557 a 22,22 0 0 0 -5.691125,0.769454 l 3.644739,13.418225 a 8.0952377,8.0952377 0 0 1 4.185274,-0.0134 8.0952377,8.0952377 0 0 1 0.0047,0.002 l 3.553271,-13.445612 a 22,22 0 0 0 -5.69681,-0.730187 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R12">
+      <title
+         id="title74">RIGHT Upper Quadrant - 12 o'clock</title>
+    </path>
+    <path
+       d="m 26.981811,17.358801 9.863997,9.796243 A 8.0952377,8.0952377 0 0 1 40.46936,25.049236 L 36.824621,11.631011 a 22,22 0 0 0 -9.84281,5.72779 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R11"
+       inkscape:label="#R11">
+      <title
+         id="title73">RIGHT Upper-Outer Quadrant - 11 o'clock</title>
+    </path>
+    <path
+       d="m 21.321691,27.240824 13.438973,3.551189 a 8.0952377,8.0952377 0 0 1 2.085144,-3.636969 l -9.863997,-9.796243 a 22,22 0 0 0 -5.66012,9.882023 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R10"
+       inkscape:label="#R10">
+      <title
+         id="title72">RIGHT Upper-Outer Quadrant - 10 o'clock</title>
+    </path>
+    <path
+       d="m 27.088781,48.471454 9.795268,-9.862913 a 8.0952377,8.0952377 0 0 1 -2.109432,-3.623532 l -13.413652,3.643689 a 22,22 0 0 0 5.727816,9.842756 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R8"
+       inkscape:label="#R8">
+      <title
+         id="title70">RIGHT Lower-Outer Quadrant - 8 o'clock</title>
+    </path>
+    <path
+       d="m 36.970865,54.131021 3.552238,-13.440962 a 8.0952377,8.0952377 0 0 1 -0.0047,-10e-4 A 8.0952377,8.0952377 0 0 1 36.884,38.608571 l -9.795268,9.862913 a 22,22 0 0 0 9.882084,5.659567 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R7"
+       inkscape:label="#R7">
+      <title
+         id="title69">RIGHT Lower-Outer Quadrant - 7 o'clock</title>
+    </path>
+    <path
+       d="M 48.358801,54.091751 44.713545,40.673009 a 8.0952377,8.0952377 0 0 1 -4.190442,0.017 l -3.552238,13.440962 a 22,22 0 0 0 11.387936,-0.0393 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R6"
+       inkscape:label="#R6">
+      <title
+         id="title68">RIGHT Lower Quadrant - 6 o'clock</title>
+    </path>
+    <path
+       d="m 58.201611,48.363964 -9.868132,-9.800383 a 8.0952377,8.0952377 0 0 1 -3.619934,2.109428 l 3.645256,13.418742 a 22,22 0 0 0 9.84281,-5.727787 z"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke-width:0.814"
+       id="R5"
+       inkscape:label="#R5">
+      <title
+         id="title67">RIGHT Lower-Inner Quadrant - 5 o'clock</title>
+    </path>
+  </g>
+  <metadata
+     id="metadata78">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Breast Exam Diagram</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
